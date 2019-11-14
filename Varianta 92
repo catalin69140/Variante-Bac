@@ -1,0 +1,74 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <iomanip>
+#include <climits>
+using namespace std;
+
+int v[25][25];
+
+int main()
+{
+    int n,m,i,j,minim=INT_MAX,li=0,cj=0;
+    cin>>n>>m;
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            cin>>v[i][j];
+            if(v[i][j]<minim)
+            {
+                minim=v[i][j];
+                li=i;
+                cj=j;
+            }
+        }
+    }
+
+    for(i=li; i<n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            v[i][j]=v[i+1][j];
+        }
+    }
+
+
+    for(i=1; i<n; i++)
+    {
+        for(j=cj; j<m; j++)
+        {
+            v[i][j]=v[i][j+1];
+        }
+    }
+
+    for(i=1; i<n; i++)
+    {
+        for(j=1; j<m; j++)
+        {
+            cout<<v[i][j]<<" ";
+        }
+        cout<<'\n';
+    }
+
+    /*for(i=1; i<=n; i++)
+    {
+        if(i!=li)
+        {
+            for(j=1; j<=m; j++)
+            {
+                if(j!=cj)
+                {
+                    cout<<v[i][j]<<" ";
+                }
+            }
+            cout<<'\n';
+        }
+    }*/
+
+    return 0;
+}
+/*3 4
+2 7 1 4
+14 6 12 3
+9 22 8 5*/
