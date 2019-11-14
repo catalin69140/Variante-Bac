@@ -1,0 +1,48 @@
+Subiectul II
+
+5.#include <iostream>
+using namespace std;
+
+int v[15][15];
+
+int main()
+{
+    int k,n,m,i,j,ok=0,s=1;
+    cin>>k>>n>>m;
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            cin>>v[i][j];
+        }
+    }
+    for(j=1; j<=m; j++)
+    {
+        for(i=1; i<=n; i++)
+        {
+            if(v[j][i]==k)
+            {
+                //cout<<s<<" ";
+                ok=1;
+                s=s*j;
+                j++;
+                //cout<<v[i][j]<<" ";
+            }
+        }
+    }
+    if(ok==1)
+    {
+        cout<<s;
+    }
+    else
+    {
+        cout<<"NU EXISTA!";
+    }
+    return 0;
+}
+/*3 5 4
+2 4 5 8
+5 3 7 9
+6 2 3 10
+7 4 2 37
+8 7 3 13*/
