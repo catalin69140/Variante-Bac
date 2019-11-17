@@ -1,0 +1,33 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s[105],aux[105];
+
+int main()
+{
+    int i,ok=0;
+    cin.getline(s,105);
+    for(i=0; i<strlen(s); i++)
+    {
+        if(strchr("aeiouAEIOU",s[i])!=0)
+        {
+            ok=1;
+            strcpy(aux,s+i);
+            strcpy(s+i+1,aux);
+            s[i+1]='*';
+        }
+    }
+    if(ok==1)
+    {
+        cout<<s;
+    }
+    else
+    {
+        cout<<"FARA VOCALE!";
+    }
+    return 0;
+}
+//Examenul de bacalaureat
