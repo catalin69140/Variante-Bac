@@ -1,0 +1,28 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s[25],*p,aux1[25],aux2[25];
+
+int main()
+{
+    int i=0;
+    char a;
+    cin.getline(s,25);
+    p=strtok(s," ");
+    strcpy(aux1,p);
+    while(p!=0)
+    {
+        strcpy(aux2,p);
+        p=strtok(0," ");
+    }
+    s[0]=aux2[0];
+    s[1]='.';
+    s[2]=' ';
+    strcpy(s+3,aux1);
+    cout<<s;
+    return 0;
+}
+//popescu   vasile
