@@ -1,0 +1,42 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s[25],aux;
+
+int main()
+{
+    int i,c=-1,v=-1;
+    cin>>s;
+    for(i=0; i<strlen(s); i++)
+    {
+        if(strchr("aeiouAEIOU",s[i])==0)
+        {
+            c=i;
+            break;
+        }
+    }
+    for(i=strlen(s)-1; i>=0; i--)
+    {
+        if(strchr("aeiouAEIOU",s[i])!=0)
+        {
+            v=i;
+            break;
+        }
+    }
+    if(c==-1 || v==-1)
+    {
+        cout<<"IMPOSIBIL!";
+    }
+    else
+    {
+        aux=s[c];
+        s[c]=s[v];
+        s[v]=aux;
+        cout<<s;
+    }
+    return 0;
+}
+//Marmorat
