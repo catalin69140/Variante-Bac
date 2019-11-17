@@ -1,0 +1,50 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char x[205],y[205],s1[205],s2[205];
+
+int main()
+{
+    int i;
+    cin>>x>>y;
+    for(i=0; i<strlen(x); i++)
+    {
+        if(strchr("aeiou",x[i])!=0)
+        {
+            strcpy(s1+i,"*");
+        }
+        else if(strchr("aeiou",x[i])==0)
+        {
+            strcpy(s1+i,"#");
+        }
+    }
+    for(i=0; i<strlen(y); i++)
+    {
+        if(strchr("aeiou",y[i])!=0)
+        {
+            strcpy(s2+i,"*");
+        }
+        else if(strchr("aeiou",y[i])==0)
+        {
+            strcpy(s2+i,"#");
+        }
+    }
+    for(i=0; i<strlen(x); i++)
+    {
+        if(s1[i]==s2[i])
+        {
+            cout<<s1[i];
+        }
+        else if(s1[i]!=s2[i])
+        {
+            cout<<"?";
+        }
+    }
+    cout<<'\n';
+    cout<<s1<<" "<<s2;
+    return 0;
+}
+//diamant pierdut
