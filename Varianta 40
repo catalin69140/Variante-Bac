@@ -1,0 +1,26 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s[260],r[260],cuvant[105],*p;
+
+int main()
+{
+    cin.getline(s,260);
+    p=strtok(s,"*");
+    strcpy(cuvant,p);
+    while(p!=0)
+    {
+        if(strcmp(p,cuvant)!=0)
+        {
+            strcat(r,p);
+        }
+        strcat(r,"*");
+        p=strtok(0,"*");
+    }
+    cout<<r;
+    return 0;
+}
+//bine*albine*foarte*bine*
