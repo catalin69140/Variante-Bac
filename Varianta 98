@@ -1,0 +1,31 @@
+SUBIECTUL II
+
+5.#include <iostream>
+using namespace std;
+
+int v[25][25];
+
+int main()
+{
+    int n,i,j,k=0;
+    cin>>n;
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            v[i][j]=2*k;
+            k++;
+        }
+    }
+    cout<<n<<'\n';
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            cout<<v[i][j]<<" ";
+        }
+        cout<<'\n';
+    }
+    return 0;
+}
+//3
