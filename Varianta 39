@@ -1,0 +1,29 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s[260],*p,s1[260];
+
+int main()
+{
+    cin.getline(s,260);
+    p=strtok(s," ");
+    while(p!=0)
+    {
+        if(strchr("aeiou",p[0])!=0)
+        {
+            strcat(s1,strrev(p));
+        }
+        else
+        {
+            strcat(s1,p);
+        }
+        strcat(s1," ");
+        p=strtok(0," ");
+    }
+    cout<<s1;
+    return 0;
+}
+//maine este proba la informatica
