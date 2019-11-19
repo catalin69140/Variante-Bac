@@ -1,0 +1,44 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+#include <climits>
+using namespace std;
+
+char s[105];
+int ap[10];
+
+int main()
+{
+    int i,ok=0,minim=INT_MAX,maxim=INT_MIN;
+    cin.getline(s,55);
+    for(i=0; i<strlen(s); i++)
+    {
+        if(strchr("0123456789",s[i])!=0)
+        {
+            ap[s[i]]++;
+            if(maxim<ap[i])
+            {
+                ok=1;
+                maxim=ap[s[i]];
+            }
+        }
+    }
+    if(ok==1)
+    {
+        for(i='0'; i<='9'; i++)
+        {
+            if(ap[i]==maxim)
+            {
+                cout<<i-48;
+                return 0;
+            }
+        }
+    }
+    else
+    {
+        cout<<"NU";
+    }
+    return 0;
+}
+//Voi lua 9.5 la matematica 10 la informatica si 10 la romana
