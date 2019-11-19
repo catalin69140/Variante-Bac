@@ -1,0 +1,24 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s1[55],s2[55];
+
+int main()
+{
+    int i,n,nr=0;
+    cin.getline(s1,55);
+    for(i=0; i<strlen(s1); i++)
+    {
+        if((s1[i]>='a' && s1[i]<='z') || (s1[i]>='A' && s1[i]<='Z'))
+        {
+            s2[nr]=s1[i];
+            nr++;
+        }
+    }
+    cout<<s2;
+    return 0;
+}
+//Voi lua 10 la informatica
