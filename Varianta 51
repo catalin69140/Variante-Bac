@@ -1,0 +1,28 @@
+SUBIECTUL II
+
+5.#include <iostream>
+#include <cstring>
+using namespace std;
+
+char s1[105],s2[105];
+
+int main()
+{
+    int i,j,nr=0;
+    cin>>s1;
+    //cin.getline(s,105);
+    for(i=0; i<strlen(s1); i++)
+    {
+        if(strchr("123456789",s1[i])!=0)
+        {
+            for(j=1; j<=s1[i]-48; j++)
+            {
+                s2[nr]=s1[i-1];
+                nr++;
+            }
+        }
+    }
+    cout<<s2;
+    return 0;
+}
+//a2b1f2
