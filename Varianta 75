@@ -1,6 +1,6 @@
 SUBIECTUL II
 
-#include <iostream>
+5.#include <iostream>
 using namespace std;
 
 int v[105][105];
