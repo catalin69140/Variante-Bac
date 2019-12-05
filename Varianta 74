@@ -1,0 +1,49 @@
+SUBIECTUL II
+
+5.#include <iostream>
+using namespace std;
+
+int v[105][105];
+
+int fibonacci(int k)
+{
+    if(k<2)
+    {
+        return 1;
+    }
+    else
+    {
+        return fibonacci(k-1)+fibonacci(k-2);
+    }
+}
+
+int main()
+{
+    int n,i,j,k=0;
+    cin>>n;
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            v[i][j]=fibonacci(k);
+            k++;
+        }
+    }
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            if(v[i][j]<10)
+            {
+                cout<<v[i][j]<<" ";
+            }
+            else
+            {
+                cout<<v[i][j]%10<<" ";
+            }
+        }
+        cout<<'\n';
+    }
+    return 0;
+}
+//4
